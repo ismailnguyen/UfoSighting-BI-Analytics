@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{5B15C89E-1DFE-4E53-92C6-82B7607791D3}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{1DD568FE-F30D-407F-A3C4-0E35F0217B97}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1060,8 +1060,9 @@
                       cachedDataType="str"
                       cachedLength="4000"
                       cachedName="city"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionCity.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]" />
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1177,8 +1178,9 @@
                       cachedDataType="str"
                       cachedLength="4000"
                       cachedName="country"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionCountry.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]" />
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1293,8 +1295,9 @@
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="date"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionDate.Inputs[OLE DB Destination Input].ExternalColumns[date]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]" />
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1409,8 +1412,9 @@
                       cachedDataType="str"
                       cachedLength="4000"
                       cachedName="shape"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionForme.Inputs[OLE DB Destination Input].ExternalColumns[shape]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[shape]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1525,8 +1529,9 @@
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="hour"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionHour.Inputs[OLE DB Destination Input].ExternalColumns[hour]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[hour]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1641,16 +1646,18 @@
                       cachedDataType="str"
                       cachedLength="4000"
                       cachedName="latitude"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[latitude]" />
                     <inputColumn
                       refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].Columns[longitude ]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
                       cachedName="longitude "
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[longitude ]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1709,9 +1716,23 @@
               </inputs>
               <outputs>
                 <output
+                  refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 7]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 7"
+                  synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
                   refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 1]"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 1"
+                  synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 6]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 6"
                   synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
@@ -1738,23 +1759,9 @@
                 </output>
                 <output
                   refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 5]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 5"
-                  synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 6]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 6"
-                  synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 7]"
                   dangling="true"
                   deleteOutputOnPathDetached="true"
-                  name="Multicast Output 7"
+                  name="Multicast Output 5"
                   synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2082,43 +2089,2264 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Génération modèle en étoile\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[country]"
+                      name="country"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[shape]"
+                      name="shape">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[hour]"
+                      name="hour">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[shape]"
+                      name="shape"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[hour]"
+                      name="hour">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\Sort 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[shape]"
+                      name="shape">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[hour]"
+                      name="hour"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\Sort 3"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 3"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[shape]"
+                      name="shape">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude "
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[hour]"
+                      name="hour">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\Suppression doublons"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Suppression doublons"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[shape]"
+                      name="shape">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]"
+                      name="date"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[hour]"
+                      name="hour">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\Suppresssion doublons"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Suppresssion doublons"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="datetime"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="state"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[datetime]"
+                      name="datetime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[datetime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]"
+                      name="city"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[state]"
+                      name="state">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[shape]"
+                      name="shape">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[latitude]"
+                      name="latitude">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[longitude ]"
+                      name="longitude ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[hour]"
+                      name="hour">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[duration]"
+                      name="duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
-              endId="Package\Génération modèle en étoile\DimensionCity.Inputs[OLE DB Destination Input]"
+              endId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input]"
               name="Multicast Output 1"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 2]"
-              endId="Package\Génération modèle en étoile\DimensionCountry.Inputs[OLE DB Destination Input]"
+              endId="Package\Génération modèle en étoile\Sort 1.Inputs[Sort Input]"
               name="Multicast Output 2"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 2]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 3]"
-              endId="Package\Génération modèle en étoile\DimensionForme.Inputs[OLE DB Destination Input]"
+              endId="Package\Génération modèle en étoile\Sort 3.Inputs[Sort Input]"
               name="Multicast Output 3"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 3]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 4]"
-              endId="Package\Génération modèle en étoile\DimensionHour.Inputs[OLE DB Destination Input]"
+              endId="Package\Génération modèle en étoile\Sort 2.Inputs[Sort Input]"
               name="Multicast Output 4"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 4]" />
             <path
-              refId="Package\Génération modèle en étoile.Paths[Multicast Output 5]"
-              endId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 5"
-              startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 5]" />
-            <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 6]"
-              endId="Package\Génération modèle en étoile\DimensionDate.Inputs[OLE DB Destination Input]"
+              endId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input]"
               name="Multicast Output 6"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 6]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Multicast Output 7]"
+              endId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input]"
+              name="Multicast Output 7"
+              startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 7]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[OLE DB Source Output]"
               endId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]"
               name="OLE DB Source Output"
               startId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output]"
+              endId="Package\Génération modèle en étoile\DimensionCity.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output1]"
+              endId="Package\Génération modèle en étoile\DimensionDate.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output2]"
+              endId="Package\Génération modèle en étoile\DimensionCountry.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output3]"
+              endId="Package\Génération modèle en étoile\DimensionHour.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output4]"
+              endId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[Sort Output5]"
+              endId="Package\Génération modèle en étoile\DimensionForme.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Génération modèle en étoile\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2346,7 +4574,7 @@
     design-time-name="Package\Génération modèle en étoile">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="142,42"
           Id="Package\Génération modèle en étoile\Multidiffusion"
@@ -2358,7 +4586,7 @@
         <NodeLayout
           Size="165,42"
           Id="Package\Génération modèle en étoile\DimensionPosition"
-          TopLeft="732,452" />
+          TopLeft="745,453" />
         <NodeLayout
           Size="165,42"
           Id="Package\Génération modèle en étoile\DimensionCountry"
@@ -2366,7 +4594,7 @@
         <NodeLayout
           Size="151,42"
           Id="Package\Génération modèle en étoile\DimensionHour"
-          TopLeft="959,347" />
+          TopLeft="1002,349" />
         <NodeLayout
           Size="158,42"
           Id="Package\Génération modèle en étoile\DimensionForme"
@@ -2378,7 +4606,7 @@
         <NodeLayout
           Size="150,42"
           Id="Package\Génération modèle en étoile\DimensionDate"
-          TopLeft="981,150" />
+          TopLeft="1082,153" />
         <EdgeLayout
           Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output]"
           TopLeft="637.5,55">
@@ -2401,20 +4629,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Génération modèle en étoile\Suppresssion doublons"
+          TopLeft="290,158" />
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 6]"
-          TopLeft="707,174">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 7]"
+          TopLeft="565,178">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="274,0"
+              EndConnector="-89,0"
               Start="0,0"
-              End="266.5,0">
+              End="-81.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="266.5,0" />
+                    End="-81.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2424,31 +4656,207 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 5]"
-          TopLeft="649.4,198">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output]"
+          TopLeft="290,180">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="165.1,254"
+              EndConnector="-78,0"
               Start="0,0"
-              End="165.1,246.5">
+              End="-70.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,109.766718506998" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,109.766718506998"
-                    Point2="0,113.766718506998"
-                    Point3="4,113.766718506998" />
+                    End="-70.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Génération modèle en étoile\Suppression doublons"
+          TopLeft="802,153" />
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
+          TopLeft="707,175.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95,0"
+              Start="0,0"
+              End="87.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="161.1,113.766718506998" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161.1,113.766718506998"
-                    Point2="165.1,113.766718506998"
-                    Point3="165.1,117.766718506998" />
+                    End="87.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Sort Output1]"
+          TopLeft="984,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98,0"
+              Start="0,0"
+              End="90.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="165.1,246.5" />
+                    End="90.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Génération modèle en étoile\Sort"
+          TopLeft="132,283" />
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Sort Output2]"
+          TopLeft="180.75,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 1"
+          TopLeft="388,386" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 2"
+          TopLeft="1022,272" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 3"
+          TopLeft="776,377" />
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 6]"
+          TopLeft="595.8,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-414.8,85"
+              Start="0,0"
+              End="-414.8,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.7170923379175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.7170923379175"
+                    Point2="0,25.7170923379175"
+                    Point3="-4,25.7170923379175" />
+                  <mssgle:LineSegment
+                    End="-410.8,25.7170923379175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-410.8,25.7170923379175"
+                    Point2="-414.8,25.7170923379175"
+                    Point3="-414.8,29.7170923379175" />
+                  <mssgle:LineSegment
+                    End="-414.8,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 2]"
+          TopLeft="622.6,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-181.1,188"
+              Start="0,0"
+              End="-181.1,180.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.2052877138414" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,80.2052877138414"
+                    Point2="0,84.2052877138414"
+                    Point3="-4,84.2052877138414" />
+                  <mssgle:LineSegment
+                    End="-177.1,84.2052877138414" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.1,84.2052877138414"
+                    Point2="-181.1,84.2052877138414"
+                    Point3="-181.1,88.2052877138414" />
+                  <mssgle:LineSegment
+                    End="-181.1,180.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 3]"
+          TopLeft="649.4,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180.1,179"
+              Start="0,0"
+              End="180.1,171.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.1741835147745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.1741835147745"
+                    Point2="0,80.1741835147745"
+                    Point3="4,80.1741835147745" />
+                  <mssgle:LineSegment
+                    End="176.1,80.1741835147745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176.1,80.1741835147745"
+                    Point2="180.1,80.1741835147745"
+                    Point3="180.1,84.1741835147745" />
+                  <mssgle:LineSegment
+                    End="180.1,171.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2463,26 +4871,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="358.3,149"
+              EndConnector="399.3,74"
               Start="0,0"
-              End="358.3,141.5">
+              End="399.3,66.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.0805500982318" />
+                    End="0,18.3889980353634" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.0805500982318"
-                    Point2="0,45.0805500982318"
-                    Point3="4,45.0805500982318" />
+                    Point1="0,18.3889980353634"
+                    Point2="0,22.3889980353634"
+                    Point3="4,22.3889980353634" />
                   <mssgle:LineSegment
-                    End="354.3,45.0805500982318" />
+                    End="395.3,22.3889980353634" />
                   <mssgle:CubicBezierSegment
-                    Point1="354.3,45.0805500982318"
-                    Point2="358.3,45.0805500982318"
-                    Point3="358.3,49.0805500982318" />
+                    Point1="395.3,22.3889980353634"
+                    Point2="399.3,22.3889980353634"
+                    Point3="399.3,26.3889980353634" />
                   <mssgle:LineSegment
-                    End="358.3,141.5" />
+                    End="399.3,66.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2492,31 +4900,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 3]"
-          TopLeft="622.6,198">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output3]"
+          TopLeft="1076.5,314">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-186.6,255"
+              EndConnector="0,35"
               Start="0,0"
-              End="-186.6,247.5">
+              End="0,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,110.214618973561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,110.214618973561"
-                    Point2="0,114.214618973561"
-                    Point3="-4,114.214618973561" />
-                  <mssgle:LineSegment
-                    End="-182.6,114.214618973561" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-182.6,114.214618973561"
-                    Point2="-186.6,114.214618973561"
-                    Point3="-186.6,118.214618973561" />
-                  <mssgle:LineSegment
-                    End="-186.6,247.5" />
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2526,31 +4922,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 2]"
-          TopLeft="595.8,198">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output4]"
+          TopLeft="828.5,419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-415.3,161"
+              EndConnector="0,34"
               Start="0,0"
-              End="-415.3,153.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.7111984282907" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.7111984282907"
-                    Point2="0,48.7111984282907"
-                    Point3="-4,48.7111984282907" />
-                  <mssgle:LineSegment
-                    End="-411.3,48.7111984282907" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-411.3,48.7111984282907"
-                    Point2="-415.3,48.7111984282907"
-                    Point3="-415.3,52.7111984282907" />
-                  <mssgle:LineSegment
-                    End="-415.3,153.5" />
+                    End="0,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2560,19 +4944,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
-          TopLeft="565,179">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output5]"
+          TopLeft="438.75,428">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-353,0"
+              EndConnector="0,25"
               Start="0,0"
-              End="-345.5,0">
+              End="0,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-345.5,0" />
+                    End="0,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
