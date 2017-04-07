@@ -5,8 +5,20 @@
   <DataSets />
   <Reports>
     <ProjectItem>
-      <Name>UfoSighting-Report.rdl</Name>
-      <FullPath>UfoSighting-Report.rdl</FullPath>
+      <Name>Report1.rdl</Name>
+      <FullPath>Report1.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report2.rdl</Name>
+      <FullPath>Report2.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report3.rdl</Name>
+      <FullPath>Report3.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report4.rdl</Name>
+      <FullPath>Report4.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

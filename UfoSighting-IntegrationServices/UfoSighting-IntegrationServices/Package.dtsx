@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{2A0BF740-E653-4BF5-91F1-0D0EDAD08E11}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{6F17289A-6FED-4327-87D4-F79708F52133}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1900,11 +1900,11 @@ from tempdata</property>
               </outputs>
             </component>
             <component
-              refId="Package\Génération modèle en étoile\DimensionPosition"
+              refId="Package\Génération modèle en étoile\DimensionState"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="DimensionPosition"
+              name="DimensionState"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1915,7 +1915,7 @@ from tempdata</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[DimensionPosition]</property>
+                  name="OpenRowset">[DimensionState]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1957,7 +1957,7 @@ from tempdata</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Génération modèle en étoile\DimensionPosition.Connections[OleDbConnection]"
+                  refId="Package\Génération modèle en étoile\DimensionState.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
                   connectionManagerRefId="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1965,64 +1965,50 @@ from tempdata</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input]"
+                  refId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      refId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input].Columns[state]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="latitude"
-                      externalMetadataColumnId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[latitude]" />
-                    <inputColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].Columns[longitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="longitude"
-                      externalMetadataColumnId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[longitude]" />
+                      cachedLength="40"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output].Columns[state]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      refId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       codePage="1252"
                       dataType="str"
-                      length="4000"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4000"
-                      name="longitude " />
+                      length="40"
+                      name="state" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Génération modèle en étoile\DimensionPosition.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Génération modèle en étoile\DimensionState.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Génération modèle en étoile\DimensionState.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Génération modèle en étoile\DimensionPosition.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Génération modèle en étoile\DimensionState.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\DimensionPosition.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Génération modèle en étoile\DimensionState.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Génération modèle en étoile\DimensionPosition.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Génération modèle en étoile\DimensionState.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2254,11 +2240,11 @@ from tempdata</property>
               </outputs>
             </component>
             <component
-              refId="Package\Génération modèle en étoile\position"
+              refId="Package\Génération modèle en étoile\Récupération table temporaire"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="position"
+              name="Récupération table temporaire"
               usesDispositions="true"
               version="7">
               <properties>
@@ -2269,7 +2255,7 @@ from tempdata</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[TableDesFaits]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2278,7 +2264,19 @@ from tempdata</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct latitude, longitude
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+city,
+country,
+date,
+hour,
+shape,
+state,
+[duration (seconds)],
+ geography::STPointFromText('POINT(' + CAST([longitude] AS VARCHAR(20)) + ' ' + 
+                    CAST([latitude] AS VARCHAR(20)) + ')', 4326) as geography,
+latitude,
+longitude
+
 from tempdata</property>
                 <property
                   dataType="System.String"
@@ -2297,142 +2295,6 @@ from tempdata</property>
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
                   typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Génération modèle en étoile\position.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
-                  connectionManagerRefId="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
-                      length="30"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[latitude]"
-                      name="latitude"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
-                      length="30"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].Columns[longitude]"
-                      name="longitude"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="longitude" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[latitude]"
-                      name="latitude" />
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[longitude]"
-                      name="longitude" />
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Génération modèle en étoile\Récupération table temporaire"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Récupération table temporaire"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[TempData]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -2496,17 +2358,6 @@ from tempdata</property>
                       name="latitude"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[longitude ]"
-                      length="4000"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]"
-                      name="longitude "
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2537,27 +2388,46 @@ from tempdata</property>
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration (seconds)]"
                       name="duration (seconds)"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[geography]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[geography]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[geography]"
+                      name="geography"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      length="30"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      length="40"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[datetime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="400"
-                      name="datetime" />
                     <externalMetadataColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="city" />
-                    <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[state]"
-                      codePage="1252"
-                      dataType="str"
-                      length="40"
-                      name="state" />
                     <externalMetadataColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       codePage="1252"
@@ -2577,12 +2447,6 @@ from tempdata</property>
                       length="30"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[longitude ]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="longitude " />
-                    <externalMetadataColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[date]"
                       dataType="wstr"
                       length="400"
@@ -2598,6 +2462,22 @@ from tempdata</property>
                       dataType="str"
                       length="100"
                       name="duration (seconds)" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[geography]"
+                      dataType="image"
+                      name="geography" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="state" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2641,12 +2521,12 @@ from tempdata</property>
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[latitude]"
                       name="latitude" />
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[longitude ]"
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[state]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[longitude ]"
-                      name="longitude " />
+                      length="40"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[state]"
+                      name="state" />
                     <outputColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[date]"
                       dataType="wstr"
@@ -2654,11 +2534,23 @@ from tempdata</property>
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[date]"
                       name="date" />
                     <outputColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[geography]"
+                      dataType="image"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[geography]"
+                      name="geography" />
+                    <outputColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[hour]"
                       dataType="wstr"
                       length="400"
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[hour]"
                       name="hour" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[longitude]"
+                      name="longitude" />
                     <outputColumn
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2669,6 +2561,119 @@ from tempdata</property>
                       refId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Génération modèle en étoile\state"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="state"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct state
+from tempdata</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Génération modèle en étoile\state.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
+                  connectionManagerRefId="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      length="40"
+                      lineageId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="state" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[state]"
+                      name="state" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2781,14 +2786,6 @@ from tempdata</property>
                       externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]" />
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[longitude ]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="4000"
-                      cachedName="longitude "
-                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
-                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]" />
-                    <inputColumn
                       refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[date]"
                       cachedDataType="wstr"
                       cachedLength="10"
@@ -2810,6 +2807,28 @@ from tempdata</property>
                       cachedName="duration (seconds)"
                       externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[duration (seconds)]"
                       lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration (seconds)]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[geography]"
+                      cachedDataType="image"
+                      cachedName="geography"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[geography]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[geography]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[state]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2838,12 +2857,6 @@ from tempdata</property>
                       length="4000"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4000"
-                      name="longitude " />
-                    <externalMetadataColumn
                       refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[date]"
                       dataType="wstr"
                       length="10"
@@ -2859,6 +2872,22 @@ from tempdata</property>
                       dataType="str"
                       length="100"
                       name="duration (seconds)" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[geography]"
+                      dataType="image"
+                      name="geography" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="state" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2916,14 +2945,14 @@ from tempdata</property>
               startId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[OLE DB Source Output5]"
-              endId="Package\Génération modèle en étoile\DimensionPosition.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Génération modèle en étoile\position.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Génération modèle en étoile.Paths[OLE DB Source Output6]"
               endId="Package\Génération modèle en étoile\DimensionForme.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Génération modèle en étoile\forme.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Génération modèle en étoile.Paths[OLE DB Source Output6]"
+              endId="Package\Génération modèle en étoile\DimensionState.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Génération modèle en étoile\state.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2942,7 +2971,7 @@ from tempdata</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{14DBB2BB-1E6F-4B00-995D-3F7E925B9948}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('UfoSightings') IS NOT NULL&#xA;TRUNCATE TABLE UfoSightings;&#xA;&#xA;IF OBJECT_ID('TableDesFaits') IS NOT NULL&#xA;TRUNCATE TABLE TableDesFaits;&#xA;&#xA;IF OBJECT_ID('DimensionShape') IS NOT NULL&#xA;TRUNCATE TABLE DimensionShape;&#xA;&#xA;IF OBJECT_ID('DimensionHour') IS NOT NULL&#xA;TRUNCATE TABLE DimensionHour;&#xA;&#xA;IF OBJECT_ID('DimensionDate') IS NOT NULL&#xA;TRUNCATE TABLE DimensionDate;&#xA;&#xA;IF OBJECT_ID('DimensionPosition') IS NOT NULL&#xA;TRUNCATE TABLE DimensionPosition;&#xA;&#xA;IF OBJECT_ID('DimensionCity') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCity;&#xA;&#xA;IF OBJECT_ID('DimensionCountry') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCountry;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID('UfoSightings') IS NOT NULL&#xA;TRUNCATE TABLE UfoSightings;&#xA;&#xA;IF OBJECT_ID('TableDesFaits') IS NOT NULL&#xA;TRUNCATE TABLE TableDesFaits;&#xA;&#xA;IF OBJECT_ID('DimensionShape') IS NOT NULL&#xA;TRUNCATE TABLE DimensionShape;&#xA;&#xA;IF OBJECT_ID('DimensionHour') IS NOT NULL&#xA;TRUNCATE TABLE DimensionHour;&#xA;&#xA;IF OBJECT_ID('DimensionDate') IS NOT NULL&#xA;TRUNCATE TABLE DimensionDate;&#xA;&#xA;IF OBJECT_ID('DimensionPosition') IS NOT NULL&#xA;TRUNCATE TABLE DimensionPosition;&#xA;&#xA;IF OBJECT_ID('DimensionCity') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCity;&#xA;&#xA;IF OBJECT_ID('DimensionCountry') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCountry;&#xA;&#xA;IF OBJECT_ID('DimensionState') IS NOT NULL&#xA;TRUNCATE TABLE DimensionState;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -3099,9 +3128,7 @@ from tempdata</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3123,16 +3150,14 @@ from tempdata</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,22.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text=""
           ParentId="Package\Alimentation table temporaire"
           FontInfo="{assembly:Null}"
-          Size="29,NaN"
+          Size="29,40"
           Id="a282c1db-81b0-4f20-99b0-e489113866e7"
           TopLeft="136,315" />
       </GraphLayout>
@@ -3155,11 +3180,7 @@ from tempdata</property>
     design-time-name="Package\Génération modèle en étoile">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Génération modèle en étoile\DimensionPosition"
-          TopLeft="795,451" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="158,42"
           Id="Package\Génération modèle en étoile\DimensionForme"
@@ -3263,9 +3284,7 @@ from tempdata</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,10.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -3317,37 +3336,11 @@ from tempdata</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="116,42"
-          Id="Package\Génération modèle en étoile\position"
-          TopLeft="821,344" />
-        <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output5]"
-          TopLeft="878.25,386">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,65"
-              Start="0,0"
-              End="0,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="107,42"
           Id="Package\Génération modèle en étoile\forme"
           TopLeft="361,346" />
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output6]"
+          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output5]"
           TopLeft="410.75,388">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3368,22 +3361,39 @@ from tempdata</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Génération modèle en étoile\DimensionState"
+          TopLeft="265,51" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Génération modèle en étoile\state"
+          TopLeft="501,58" />
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output6]"
+          TopLeft="501,75.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84,0"
+              Start="0,0"
+              End="-76.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-76.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\DimensionPosition">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Génération modèle en étoile\DimensionForme">
     <Properties>
@@ -3508,7 +3518,7 @@ from tempdata</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\position">
+    design-time-name="Package\Génération modèle en étoile\forme">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3516,7 +3526,20 @@ from tempdata</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\forme">
+    design-time-name="Package\Génération modèle en étoile\DimensionState">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Génération modèle en étoile\state">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
