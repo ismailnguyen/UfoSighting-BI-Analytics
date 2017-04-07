@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{1DD568FE-F30D-407F-A3C4-0E35F0217B97}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{FDD82598-327A-46E6-A9DE-BC27D78C605E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1062,7 +1062,7 @@
                       cachedName="city"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionCity.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[city]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1297,7 +1297,7 @@
                       cachedName="date"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Génération modèle en étoile\DimensionDate.Inputs[OLE DB Destination Input].ExternalColumns[date]"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]" />
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1759,9 +1759,16 @@
                 </output>
                 <output
                   refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 5]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 5"
+                  synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 8]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 8"
                   synchronousInputId="Package\Génération modèle en étoile\Multidiffusion.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
@@ -3551,11 +3558,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Génération modèle en étoile\Suppression doublons"
+              refId="Package\Génération modèle en étoile\Sort 4"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Suppression doublons"
+              name="Sort 4"
               version="1">
               <properties>
                 <property
@@ -3570,11 +3577,11 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input]"
+                  refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[datetime]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[datetime]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3592,7 +3599,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[city]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3606,11 +3613,11 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[state]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[state]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3628,7 +3635,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[country]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3646,7 +3653,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[shape]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[shape]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3664,7 +3671,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[latitude]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[latitude]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3682,7 +3689,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[longitude ]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[longitude ]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3700,7 +3707,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[date]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[date]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="date"
@@ -3713,11 +3720,11 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[hour]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[hour]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="hour"
@@ -3734,7 +3741,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input].Columns[duration]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input].Columns[duration]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3757,16 +3764,16 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output]"
+                  refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[datetime]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[datetime]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[datetime]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[datetime]"
                       name="datetime">
                       <properties>
                         <property
@@ -3777,12 +3784,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[city]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[city]"
-                      name="city">
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[city]"
+                      name="city"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -3792,11 +3800,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[state]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[state]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[state]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[state]"
                       name="state">
                       <properties>
                         <property
@@ -3807,11 +3815,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[country]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[country]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[country]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[country]"
                       name="country">
                       <properties>
                         <property
@@ -3822,11 +3830,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[shape]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[shape]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[shape]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[shape]"
                       name="shape">
                       <properties>
                         <property
@@ -3837,11 +3845,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[latitude]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[latitude]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[latitude]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[latitude]"
                       name="latitude">
                       <properties>
                         <property
@@ -3852,11 +3860,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[longitude ]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[longitude ]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[longitude ]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[longitude ]"
                       name="longitude ">
                       <properties>
                         <property
@@ -3867,12 +3875,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[date]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[date]"
-                      name="date"
-                      sortKeyPosition="1">
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[date]"
+                      name="date">
                       <properties>
                         <property
                           containsID="true"
@@ -3882,10 +3889,10 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[hour]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[hour]"
                       dataType="wstr"
                       length="6"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[hour]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[hour]"
                       name="hour">
                       <properties>
                         <property
@@ -3896,11 +3903,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[duration]"
+                      refId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[duration]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output].Columns[duration]"
+                      lineageId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output].Columns[duration]"
                       name="duration">
                       <properties>
                         <property
@@ -3916,11 +3923,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Génération modèle en étoile\Suppresssion doublons"
+              refId="Package\Génération modèle en étoile\Sort 5"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Suppresssion doublons"
+              name="Sort 5"
               version="1">
               <properties>
                 <property
@@ -3935,11 +3942,11 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input]"
+                  refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[datetime]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[datetime]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3957,7 +3964,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[city]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3971,11 +3978,11 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[state]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[state]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -3993,7 +4000,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[country]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -4011,7 +4018,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[shape]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[shape]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -4029,7 +4036,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[latitude]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[latitude]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -4047,7 +4054,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[longitude ]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[longitude ]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -4065,7 +4072,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[date]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[date]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="date"
@@ -4078,11 +4085,11 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[hour]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[hour]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="hour"
@@ -4099,7 +4106,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input].Columns[duration]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input].Columns[duration]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4000"
@@ -4122,16 +4129,16 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output]"
+                  refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[datetime]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[datetime]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[datetime]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[datetime]"
                       name="datetime">
                       <properties>
                         <property
@@ -4142,13 +4149,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[city]"
-                      name="city"
-                      sortKeyPosition="1">
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[city]"
+                      name="city">
                       <properties>
                         <property
                           containsID="true"
@@ -4158,11 +4164,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[state]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[state]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[state]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[state]"
                       name="state">
                       <properties>
                         <property
@@ -4173,11 +4179,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[country]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[country]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[country]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[country]"
                       name="country">
                       <properties>
                         <property
@@ -4188,11 +4194,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[shape]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[shape]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[shape]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[shape]"
                       name="shape">
                       <properties>
                         <property
@@ -4203,11 +4209,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[latitude]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[latitude]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[latitude]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[latitude]"
                       name="latitude">
                       <properties>
                         <property
@@ -4218,11 +4224,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[longitude ]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[longitude ]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[longitude ]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[longitude ]"
                       name="longitude ">
                       <properties>
                         <property
@@ -4233,11 +4239,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[date]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[date]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[date]"
-                      name="date">
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[date]"
+                      name="date"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -4247,10 +4254,10 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[hour]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[hour]"
                       dataType="wstr"
                       length="6"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[hour]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[hour]"
                       name="hour">
                       <properties>
                         <property
@@ -4261,11 +4268,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[duration]"
+                      refId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[duration]"
                       codePage="1252"
                       dataType="str"
                       length="4000"
-                      lineageId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output].Columns[duration]"
+                      lineageId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output].Columns[duration]"
                       name="duration">
                       <properties>
                         <property
@@ -4280,11 +4287,222 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Génération modèle en étoile\TableDesFaits"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TableDesFaits"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TableDesFaits]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Génération modèle en étoile\TableDesFaits.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
+                  connectionManagerRefId="Package.ConnectionManagers[UNDEFINED.UfoDatabase]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[shape]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="shape"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[shape]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[shape]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[longitude ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="longitude "
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[longitude ]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[date]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[hour]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="hour"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[hour]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[hour]" />
+                    <inputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].Columns[duration]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="duration"
+                      externalMetadataColumnId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      lineageId="Package\Génération modèle en étoile\Récupération table temporaire.Outputs[OLE DB Source Output].Columns[duration]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[shape]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="shape" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[longitude ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="longitude " />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      dataType="wstr"
+                      length="10"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[hour]"
+                      dataType="wstr"
+                      length="6"
+                      name="hour" />
+                    <externalMetadataColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="duration" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Génération modèle en étoile\TableDesFaits.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Génération modèle en étoile\TableDesFaits.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Génération modèle en étoile\TableDesFaits.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Génération modèle en étoile\TableDesFaits.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
-              endId="Package\Génération modèle en étoile\Suppression doublons.Inputs[Sort Input]"
+              endId="Package\Génération modèle en étoile\Sort 5.Inputs[Sort Input]"
               name="Multicast Output 1"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 1]" />
             <path
@@ -4303,13 +4521,18 @@
               name="Multicast Output 4"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 4]" />
             <path
+              refId="Package\Génération modèle en étoile.Paths[Multicast Output 5]"
+              endId="Package\Génération modèle en étoile\TableDesFaits.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 5"
+              startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 5]" />
+            <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 6]"
               endId="Package\Génération modèle en étoile\Sort.Inputs[Sort Input]"
               name="Multicast Output 6"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 6]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Multicast Output 7]"
-              endId="Package\Génération modèle en étoile\Suppresssion doublons.Inputs[Sort Input]"
+              endId="Package\Génération modèle en étoile\Sort 4.Inputs[Sort Input]"
               name="Multicast Output 7"
               startId="Package\Génération modèle en étoile\Multidiffusion.Outputs[Multicast Output 7]" />
             <path
@@ -4321,12 +4544,12 @@
               refId="Package\Génération modèle en étoile.Paths[Sort Output]"
               endId="Package\Génération modèle en étoile\DimensionCity.Inputs[OLE DB Destination Input]"
               name="Sort Output"
-              startId="Package\Génération modèle en étoile\Suppresssion doublons.Outputs[Sort Output]" />
+              startId="Package\Génération modèle en étoile\Sort 4.Outputs[Sort Output]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Sort Output1]"
               endId="Package\Génération modèle en étoile\DimensionDate.Inputs[OLE DB Destination Input]"
               name="Sort Output"
-              startId="Package\Génération modèle en étoile\Suppression doublons.Outputs[Sort Output]" />
+              startId="Package\Génération modèle en étoile\Sort 5.Outputs[Sort Output]" />
             <path
               refId="Package\Génération modèle en étoile.Paths[Sort Output2]"
               endId="Package\Génération modèle en étoile\DimensionCountry.Inputs[OLE DB Destination Input]"
@@ -4365,7 +4588,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{14DBB2BB-1E6F-4B00-995D-3F7E925B9948}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('UfoSightings') IS NOT NULL&#xA;TRUNCATE TABLE UfoSightings;&#xA;&#xA;IF OBJECT_ID('DimensionHour') IS NOT NULL&#xA;TRUNCATE TABLE DimensionHour;&#xA;&#xA;IF OBJECT_ID('DimensionDate') IS NOT NULL&#xA;TRUNCATE TABLE DimensionDate;&#xA;&#xA;IF OBJECT_ID('DimensionPosition') IS NOT NULL&#xA;TRUNCATE TABLE DimensionPosition;&#xA;&#xA;IF OBJECT_ID('DimensionCity') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCity;&#xA;&#xA;IF OBJECT_ID('DimensionCountry') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCountry;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID('UfoSightings') IS NOT NULL&#xA;TRUNCATE TABLE UfoSightings;&#xA;&#xA;IF OBJECT_ID('TableDesFaits') IS NOT NULL&#xA;TRUNCATE TABLE TableDesFaits;&#xA;&#xA;IF OBJECT_ID('DimensionShape') IS NOT NULL&#xA;TRUNCATE TABLE DimensionShape;&#xA;&#xA;IF OBJECT_ID('DimensionHour') IS NOT NULL&#xA;TRUNCATE TABLE DimensionHour;&#xA;&#xA;IF OBJECT_ID('DimensionDate') IS NOT NULL&#xA;TRUNCATE TABLE DimensionDate;&#xA;&#xA;IF OBJECT_ID('DimensionPosition') IS NOT NULL&#xA;TRUNCATE TABLE DimensionPosition;&#xA;&#xA;IF OBJECT_ID('DimensionCity') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCity;&#xA;&#xA;IF OBJECT_ID('DimensionCountry') IS NOT NULL&#xA;TRUNCATE TABLE DimensionCountry;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -4576,51 +4799,79 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="142,42"
-          Id="Package\Génération modèle en étoile\Multidiffusion"
-          TopLeft="565,156" />
+          Size="144,42"
+          Id="Package\Génération modèle en étoile\TableDesFaits"
+          TopLeft="559,415" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\Génération modèle en étoile\DimensionCity"
-          TopLeft="66,160" />
+          Size="98,42"
+          Id="Package\Génération modèle en étoile\Sort"
+          TopLeft="132,283" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 2"
+          TopLeft="1022,272" />
         <NodeLayout
           Size="165,42"
           Id="Package\Génération modèle en étoile\DimensionPosition"
-          TopLeft="745,453" />
+          TopLeft="795,451" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Génération modèle en étoile\DimensionForme"
+          TopLeft="328,453" />
         <NodeLayout
           Size="165,42"
           Id="Package\Génération modèle en étoile\DimensionCountry"
           TopLeft="98,359" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\Génération modèle en étoile\DimensionHour"
-          TopLeft="1002,349" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Génération modèle en étoile\DimensionForme"
-          TopLeft="357,453" />
-        <NodeLayout
           Size="222,42"
           Id="Package\Génération modèle en étoile\Récupération table temporaire"
           TopLeft="528,13" />
         <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 4"
+          TopLeft="290,158" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Génération modèle en étoile\Multidiffusion"
+          TopLeft="565,156" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 1"
+          TopLeft="348,386" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 3"
+          TopLeft="828,377" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Génération modèle en étoile\DimensionHour"
+          TopLeft="1002,349" />
+        <NodeLayout
           Size="150,42"
           Id="Package\Génération modèle en étoile\DimensionDate"
           TopLeft="1082,153" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Génération modèle en étoile\DimensionCity"
+          TopLeft="66,160" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Génération modèle en étoile\Sort 5"
+          TopLeft="802,153" />
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output]"
-          TopLeft="637.5,55">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output5]"
+          TopLeft="404.25,428">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,101"
+              EndConnector="0,25"
               Start="0,0"
-              End="0,93.5">
+              End="0,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,93.5" />
+                    End="0,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4629,24 +4880,86 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="186,42"
-          Id="Package\Génération modèle en étoile\Suppresssion doublons"
-          TopLeft="290,158" />
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 7]"
-          TopLeft="565,178">
+          Id="Package\Génération modèle en étoile.Paths[Sort Output4]"
+          TopLeft="879.5,419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-89,0"
+              EndConnector="0,32"
               Start="0,0"
-              End="-81.5,0">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-81.5,0" />
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Sort Output3]"
+          TopLeft="1076.5,314">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Sort Output2]"
+          TopLeft="180.75,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Génération modèle en étoile.Paths[Sort Output1]"
+          TopLeft="909,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173,0"
+              Start="0,0"
+              End="165.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="165.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4677,24 +4990,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Génération modèle en étoile\Suppression doublons"
-          TopLeft="802,153" />
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
-          TopLeft="707,175.5">
+          Id="Package\Génération modèle en étoile.Paths[OLE DB Source Output]"
+          TopLeft="637.5,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="95,0"
+              EndConnector="0,101"
               Start="0,0"
-              End="87.5,0">
+              End="0,93.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="87.5,0" />
+                    End="0,93.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4704,19 +5013,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Sort Output1]"
-          TopLeft="984,174">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 7]"
+          TopLeft="565,178">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98,0"
+              EndConnector="-168,0"
               Start="0,0"
-              End="90.5,0">
+              End="-160.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="90.5,0" />
+                    End="-160.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4725,44 +5034,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Génération modèle en étoile\Sort"
-          TopLeft="132,283" />
-        <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Sort Output2]"
-          TopLeft="180.75,325">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Génération modèle en étoile\Sort 1"
-          TopLeft="388,386" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Génération modèle en étoile\Sort 2"
-          TopLeft="1022,272" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Génération modèle en étoile\Sort 3"
-          TopLeft="776,377" />
         <EdgeLayout
           Id="Package\Génération modèle en étoile.Paths[Multicast Output 6]"
           TopLeft="595.8,198">
@@ -4798,65 +5069,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 2]"
-          TopLeft="622.6,198">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 5]"
+          TopLeft="633.5,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-181.1,188"
+              EndConnector="0,217"
               Start="0,0"
-              End="-181.1,180.5">
+              End="0,209.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.2052877138414" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,80.2052877138414"
-                    Point2="0,84.2052877138414"
-                    Point3="-4,84.2052877138414" />
-                  <mssgle:LineSegment
-                    End="-177.1,84.2052877138414" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.1,84.2052877138414"
-                    Point2="-181.1,84.2052877138414"
-                    Point3="-181.1,88.2052877138414" />
-                  <mssgle:LineSegment
-                    End="-181.1,180.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Multicast Output 3]"
-          TopLeft="649.4,198">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="180.1,179"
-              Start="0,0"
-              End="180.1,171.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,76.1741835147745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,76.1741835147745"
-                    Point2="0,80.1741835147745"
-                    Point3="4,80.1741835147745" />
-                  <mssgle:LineSegment
-                    End="176.1,80.1741835147745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="176.1,80.1741835147745"
-                    Point2="180.1,80.1741835147745"
-                    Point3="180.1,84.1741835147745" />
-                  <mssgle:LineSegment
-                    End="180.1,171.5" />
+                    End="0,209.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4900,19 +5125,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Sort Output3]"
-          TopLeft="1076.5,314">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 3]"
+          TopLeft="649.4,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35"
+              EndConnector="232.1,179"
               Start="0,0"
-              End="0,27.5">
+              End="232.1,171.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,76.1741835147745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.1741835147745"
+                    Point2="0,80.1741835147745"
+                    Point3="4,80.1741835147745" />
+                  <mssgle:LineSegment
+                    End="228.1,80.1741835147745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="228.1,80.1741835147745"
+                    Point2="232.1,80.1741835147745"
+                    Point3="232.1,84.1741835147745" />
+                  <mssgle:LineSegment
+                    End="232.1,171.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4922,19 +5159,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Sort Output4]"
-          TopLeft="828.5,419">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 2]"
+          TopLeft="622.6,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34"
+              EndConnector="-221.1,188"
               Start="0,0"
-              End="0,26.5">
+              End="-221.1,180.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,80.2052877138414" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,80.2052877138414"
+                    Point2="0,84.2052877138414"
+                    Point3="-4,84.2052877138414" />
+                  <mssgle:LineSegment
+                    End="-217.1,84.2052877138414" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-217.1,84.2052877138414"
+                    Point2="-221.1,84.2052877138414"
+                    Point3="-221.1,88.2052877138414" />
+                  <mssgle:LineSegment
+                    End="-221.1,180.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4944,19 +5193,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Génération modèle en étoile.Paths[Sort Output5]"
-          TopLeft="438.75,428">
+          Id="Package\Génération modèle en étoile.Paths[Multicast Output 1]"
+          TopLeft="707,175.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="95,0"
               Start="0,0"
-              End="0,17.5">
+              End="87.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="87.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4969,7 +5218,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\DimensionCity">
+    design-time-name="Package\Génération modèle en étoile\TableDesFaits">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4995,33 +5244,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\DimensionCountry">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Génération modèle en étoile\DimensionHour">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Génération modèle en étoile\DimensionForme">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Génération modèle en étoile\DimensionCountry">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5047,7 +5283,33 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Génération modèle en étoile\DimensionHour">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Génération modèle en étoile\DimensionDate">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Génération modèle en étoile\DimensionCity">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
